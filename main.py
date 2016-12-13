@@ -11,7 +11,20 @@ count = get_count(histogram)
 @app.route('/')
 def word():
     prob_word = get_prob_word(histogram, count)
-    return prob_word
+    return '''
+    <!doctype html>
+    <html>
+      <head>
+        <title>Random Word</title>
+
+      </head>
+      <body>
+        <div class="container">
+          <h1>{{ prob_word }}</h1>
+    </div>
+    </body>
+    </html>
+    '''
 
 if __name__ == '__main__':
     app.run()
