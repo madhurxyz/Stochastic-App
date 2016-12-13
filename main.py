@@ -20,7 +20,7 @@ def word():
       </head>
       <body>
         <div class="container">
-          <h1>{{ prob_word }}</h1>
+          <h1>''' + prob_word + '''</h1>
     </div>
     </body>
     </html>
