@@ -11,7 +11,7 @@ count = get_count(histogram)
 @app.route('/')
 def word():
     prob_word = get_prob_word(histogram, count)
-    return render_template("index.html")
+    return prob_word
 
 if __name__ == '__main__':
     app.run()
