@@ -10,7 +10,8 @@ count = get_count(histogram)
 
 @app.route('/')
 def word():
-    return "<h1>Hello World</h1>"
+    prob_word = get_prob_word(histogram, count)
+    return render_template("index.html")
 
 if __name__ == '__main__':
     app.run()
