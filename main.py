@@ -31,7 +31,7 @@ def word():
 @app.route('/<int:num>')
 def sentence(num):
     for index in range(0, num):
-        return '''<h1>hello world ''' + num + '''</h1>
+        return '''<h1>hello world ''' + str(num) + '''</h1>
         '''
 
 if __name__ == '__main__':
