@@ -12,19 +12,20 @@ count = get_count(histogram)
 def word():
     prob_word = get_prob_word(histogram, count)
     return '''
-    <!doctype html>
-    <html>
-      <head>
-        <title>Random Word</title>
-
-      </head>
-      <body>
-        <div class="container">
-          <h1>''' + prob_word + '''</h1>
-    </div>
-    </body>
-    </html>
-    '''
+<!doctype html>
+<html>
+  <head>
+    <title>Random Word</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1>''' + prob_word + '''</h1>
+</div>
+</body>
+</html>
+'''
 
 if __name__ == '__main__':
     app.run()

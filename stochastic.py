@@ -32,7 +32,6 @@ def my_app(file_name):
     # random_word = get_random_word(histogram)
     count = get_count(histogram)
     prob_word = get_prob_word(histogram, count)
-    print prob_word
 
 
 

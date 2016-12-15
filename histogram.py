@@ -47,7 +47,6 @@ def get_words_list(file_name):
   word_string = ' '.join(lines)
   no_punctuation = remove_punctuation(word_string)
   words_list = no_punctuation.split()
-  print words_list
   return words_list
 
 def my_app():
