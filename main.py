@@ -35,12 +35,26 @@ def sentence(num):
         prob_word = get_prob_word(histogram, count)
         words.append(prob_word)
         sentence = ' '.join(words) + "."
-    return '''<h1>''' + sentence + '''</h1>'''
+    return '''
+<!doctype html>
+<html>
+  <head>
+    <title>Random Word</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1>''' + sentence + '''</h1>
+</div>
+</body>
+</html>
+'''
 
 if __name__ == '__main__':
     # comment next two lines to run on heroku
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
+    # port = int(os.environ.get('PORT', 5000))
+    # app.run(host='0.0.0.0', port=port)
 
     # uncomment next line to run locally
-    # app.run()
+    app.run()
