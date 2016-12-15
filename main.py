@@ -30,9 +30,12 @@ def word():
 
 @app.route('/<int:num>')
 def sentence(num):
+    words = []
     for index in range(0, num):
-        return '''<h1>hello world ''' + str(num) + '''</h1>
-        '''
+        prob_word = get_prob_word(histogram, count)
+        words.append(prob_word)
+        sentence = ' '.join(words) + "."
+    return '''<h1>''' + sentence + '''</h1>'''
 
 if __name__ == '__main__':
     # comment next two lines to run on heroku
