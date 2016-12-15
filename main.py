@@ -28,10 +28,14 @@ def word():
 </html>
 '''
 
+@app.route('/<int:num>')
+def sentence(num):
+    return '''<h1>''' + num + '''</h1>''' 
+
 if __name__ == '__main__':
     # comment next two lines to run on heroku
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
+    # port = int(os.environ.get('PORT', 5000))
+    # app.run(host='0.0.0.0', port=port)
 
     # uncomment next line to run locally
-    # app.run()
+    app.run()
