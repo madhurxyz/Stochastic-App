@@ -30,7 +30,9 @@ def word():
 
 @app.route('/<int:num>')
 def sentence(num):
-    return '''<h1>''' + num + '''</h1>''' 
+    for index in range(0, num):
+        return '''<h1>hello world ''' + num + '''</h1>
+        '''
 
 if __name__ == '__main__':
     # comment next two lines to run on heroku
